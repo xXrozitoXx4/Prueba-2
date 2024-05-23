@@ -10,6 +10,10 @@ body{
     margin: 10 px;
     border-radius: 5px; 
     text-align: left;
-    color: #ffffff;
     float: right;
+}
+
+h1{
+    color: #ffffff;
+    font-family: arial;
 }

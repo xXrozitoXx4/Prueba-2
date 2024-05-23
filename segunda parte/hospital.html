@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<H1>Generar un reporte</H1>
+<input type="button" value="reporte" onclick="genera_tabla()" />
+<script>
+function genera_tabla() {
+    var body = document.getElementsByTagName("body")[0];
+  
+ 
+    var tabla = document.createElement("table");
+    var tblBody = document.createElement("tbody");
+  
+    // Crea las celdas
+    for (var i = 0; i < 7; i++) {
+      // Crea las hileras de la tabla
+      var hilera = document.createElement("tr");
+  
+      for (var j = 0; j < 3; j++) {
+     
+        var celda = document.createElement("td");
+        var textoCelda = document.createTextNode(
+          "Homoglobina " + ", genero " + ",alerta",
+        );
+        var textoCelda = document.createTextNode(
+          "Homoglobina ",
+        );var textoCelda = document.createTextNode(
+          "Homoglobina ",
+        );
+        celda.appendChild(textoCelda);
+        hilera.appendChild(celda);
+      }
+  
+      // agrega la hilera al final de la tabla (al final del elemento tblbody)
+      tblBody.appendChild(hilera);
+    }
+  
+    // posiciona el <tbody> debajo del elemento <table>
+    tabla.appendChild(tblBody);
+    // appends <table> into <body>
+    body.appendChild(tabla);
+    // modifica el atributo "border" de la tabla y lo fija a "2";
+    tabla.setAttribute("border", "");
+  }
+  </script>
+</body>
+</html>
+
