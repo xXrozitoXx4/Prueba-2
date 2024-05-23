@@ -17,13 +17,11 @@ function genera_tabla() {
     var tabla = document.createElement("table");
     var tblBody = document.createElement("tbody");
   
-    // Crea las celdas
+    
     for (var i = 0; i < 7; i++) {
-      // Crea las hileras de la tabla
+      
       var hilera = document.createElement("tr");
-  
       for (var j = 0; j < 3; j++) {
-     
         var celda = document.createElement("td");
         var textoCelda = document.createTextNode(
           "Homoglobina " + ", genero " + ",alerta",
@@ -37,15 +35,12 @@ function genera_tabla() {
         hilera.appendChild(celda);
       }
   
-      // agrega la hilera al final de la tabla (al final del elemento tblbody)
+      
       tblBody.appendChild(hilera);
     }
   
-    // posiciona el <tbody> debajo del elemento <table>
     tabla.appendChild(tblBody);
-    // appends <table> into <body>
     body.appendChild(tabla);
-    // modifica el atributo "border" de la tabla y lo fija a "2";
     tabla.setAttribute("border", "");
   }
   </script>
